@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Agendar Cita{% endblock %}
+
+{% block content %}
+    <h1>Agendar Cita</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.patient.label }} {{ form.patient }}
+        </div>
+        <div>
+            {{ form.doctor.label }} {{ form.doctor }}
+        </div>
+        <div>
+            {{ form.date.label }} {{ form.date }}
+        </div>
+        <div>
+            {{ form.submit }}
+        </div>
+    </form>
+{% endblock %}

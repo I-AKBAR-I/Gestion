@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Lista de Citas{% endblock %}
+
+{% block content %}
+    <h1>Lista de Citas</h1>
+    <ul>
+        {% for appointment in appointments %}
+            <li>{{ appointment.patient.name }} tiene una cita con {{ appointment.doctor.name }} el {{ appointment.date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
